@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Docker Image (1)') {
+            steps {
+                sh 'echo "Executando o comando Docker Build"'
+            }
+        }
+        stage('Push Docker Image (2)') {
+            steps {
+                sh 'echo "Executando o comando Docker Push"'
+            }
+        }
+        stage('Push Docker Image (2)') {
+            steps {
+                sh 'echo "Executando o comando kubectl apply"'
+            }
+        }
+    }
+}
